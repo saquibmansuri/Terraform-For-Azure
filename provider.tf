@@ -8,13 +8,13 @@ terraform {
 }
 
 provider "azurerm" {
-  subscription_id = ""  #can be found in subscriptions
-  client_id = ""    #Client id is the application ID
-  client_secret = "" #client secret is inside Client credentials
-  tenant_id = "" #tenant ID is directory ID 
+  subscription_id = ""  # Can be found in subscriptions
+  client_id       = ""    # Client id is the application ID
+  client_secret   = "" # Client secret is inside Client credentials
+  tenant_id       = "" # Tenant ID is directory ID 
   features {
     resource_group {
-      prevent_deletion_if_contains_resources = false
+      prevent_deletion_if_contains_resources = false # This will destroy resource group even if it contains resources
     }
   }
 }

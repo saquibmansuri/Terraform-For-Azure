@@ -1,3 +1,5 @@
+# THIS FILE WILL CREATE RESOURCE GROUP
+
 
 # CREATING RESOURCE GROUP 
 resource "azurerm_resource_group" "resource_group"{

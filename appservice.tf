@@ -1,11 +1,13 @@
+# THIS FILE WILL CREATE TWO WEB APPS
+
 
 # CREATING SERVICE PLAN FOR WEB APP API
 resource "azurerm_service_plan" "api_service_plan" {
   name                = "${var.subdomain_prefix}_api_service_plan"
   resource_group_name = azurerm_resource_group.resource_group.name
   location            = azurerm_resource_group.resource_group.location
-  os_type             = var.os_type
-  sku_name            = var.sku_name
+  os_type             = var.app_os_type
+  sku_name            = var.app_sku_name
 }
 
 # CREATING API WEB APP
@@ -30,18 +32,15 @@ resource "azurerm_linux_web_app" "api_web_app" {
 
 }
 
-
-
-
-
+#####################################################################################################################
 
 # CREATING SERVICE PLAN FOR WEB APP DM
 resource "azurerm_service_plan" "dm_service_plan" {
   name                = "${var.subdomain_prefix}_dm_service_plan"
   resource_group_name = azurerm_resource_group.resource_group.name
   location            = azurerm_resource_group.resource_group.location
-  os_type             = var.os_type
-  sku_name            = var.sku_name
+  os_type             = var.app_os_type
+  sku_name            = var.app_sku_name
 }
 
 # CREATING DM WEB APP
