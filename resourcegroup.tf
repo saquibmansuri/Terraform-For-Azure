@@ -1,0 +1,6 @@
+
+# CREATING RESOURCE GROUP 
+resource "azurerm_resource_group" "resource_group"{
+    name = "${var.subdomain_prefix}.app"
+    location = var.location
+}
