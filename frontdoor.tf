@@ -42,7 +42,7 @@ resource "azurerm_cdn_frontdoor_origin" "frontdoor_origin" {
 resource "azurerm_cdn_frontdoor_custom_domain" "frontdoor_custom_domain" {
   name = "${var.subdomain_prefix}-frontdoor-custom-domain"
   cdn_frontdoor_profile_id = azurerm_cdn_frontdoor_profile.frontdoor_profile.id
-  host_name = "${var.subdomain_prefix}.sentra.world" #IMPORTANT
+  host_name = "${var.subdomain_prefix}.saquib.world" #IMPORTANT # PUT THIS ACCORDING TO YOUR USECASE
   #tls block is required
   tls {
     certificate_type    = "ManagedCertificate"

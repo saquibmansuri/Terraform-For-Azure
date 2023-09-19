@@ -8,6 +8,25 @@ variable "subdomain_prefix" {
 
 ######################################################################################
 
+# USED IN provider.tf FILE
+variable "subscription_id" {
+  type = string
+}
+
+variable "client_id" {
+  type = string
+}
+
+variable "client_secret" {
+  type = string
+}
+
+variable "tenant_id" {
+  type = string
+}
+
+########################################################################################
+
 # USED IN resourcegroup.tf FILE
 variable "location" {
   type = string
@@ -63,5 +82,16 @@ variable "static_website_index_document" {
 }
 
 variable "static_website_error_document" {
+  type = string
+}
+
+########################################################################################
+
+# USED IN vnet.tf FILE
+variable "vnet_cidr" {
+  type = string
+}
+
+variable "subnet1_cidr" {
   type = string
 }
